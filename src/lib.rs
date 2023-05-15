@@ -42,7 +42,7 @@ impl fmt::Debug for Shim {
     #[cfg(feature = "with-backtrace")]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         if !self.0.frames().is_empty() {
-            write!(fmt, "\n{:?}", self.0)
+            write!(fmt, "\n{:#?}", self.0)
         } else {
             Ok(())
         }
